@@ -28,6 +28,7 @@ const client = new ApolloClient({
 });
 
 function App() {
+    //------- Styles-----------
     const link = css`
       text-decoration: none;
       padding: 16px;
@@ -45,6 +46,7 @@ function App() {
         background-color: #d9d9d9;
       }
     `;
+    //---------------------------------
     return <ApolloProvider client={client}>   <Router>
         <div>
             <ul css={ul}>
