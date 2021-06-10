@@ -16,18 +16,18 @@ function AfficheTODO() {
     const [changeIsDone, {error}] = useMutation(UPDATE_TODO_STATUS_BY_ID);
     // getTODOByDATE
     const [filterData, {data}] = useLazyQuery(LOAD_TODOS_WITH_ORDER);
-    /*
-    const [filterDatas, {data: datas}] = useLazyQuery(LOAD_TODOS_WITH_ARG);
+/*
+    const [filterDataIsDone, {data: datas}] = useLazyQuery(LOAD_TODOS_WITH_ARG);
     if (datas && datas.getTodoList) {
         console.log(datas.getTodoList);
-    }*/
-    /*const orderByType = (val) => {
-        filterDatas({
-            variables: {"filters": {"types": val}}
+    }
+    const orderByIsDone = (val) => {
+        filterDataIsDone({
+            variables: {"filters": {"isDone": val}}
         });
         console.log(datas);
     }
-    */
+*/
     const updatIsDone = (ID, isDone) => {
         changeIsDone({
             variables: {
